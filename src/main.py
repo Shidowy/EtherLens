@@ -40,8 +40,6 @@ def main():
             # Display the distance on the screen
             cv2.putText(frame, f"Distance: {distance}", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
-            cv2.line(frame, (index_x, index_y), (thumb_x, thumb_y), (0, 255, 0), 2)
-
             # resizing
             obj_width = max(min_size, min(max_size, distance))
             obj_height = max(min_size, min(max_size, distance * 0.6))  # Adjust height based on width
