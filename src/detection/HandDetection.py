@@ -6,8 +6,8 @@ class HandDetector:
         self.mp_hand = mp.solutions.hands
         self.hand_detector = self.mp_hand.Hands(min_detection_confidence=0.7, min_tracking_confidence=0.5)
         self.mp_draw = mp.solutions.drawing_utils
-        self.color = (0, 255, 0)  # Color for hand landmarks and connections
-        self.line_color = (0, 0, 255)  # Red color for the line
+        self.color = (0, 255, 0) 
+        self.line_color = (0, 0, 255) 
 
     def detect_hands(self, frame):
         rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
